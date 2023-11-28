@@ -1,0 +1,11 @@
+html elemetns
+Tags--> opening tags
+nesting
+css selector
+css property
+css value
+html attribues, attibute name, attribute value, class attribute
+tool tip
+html structure
+indents
+line wrapping
