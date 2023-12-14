@@ -1,3 +1,13 @@
+
+Math.round
+use of escape character (\)(\")(\n)
+template string
+	inter polation
+	multi-line strings
+three ways to create strings
+	By using single quotes
+	by using double quotes
+	by using backticks
 html elemetns
 Tags--> opening tags
 nesting
