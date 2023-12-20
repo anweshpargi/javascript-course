@@ -27,3 +27,20 @@ Variables
 	
 indents
 line wrapping
+
+truthy and falsy
+	Falsy values = false, 0, '', NaN, undefined, null
+	Truthy values = any value that is not considered as falsy
+terinary operator = true ? 'truthy' : 'falsy';
+guard operator
+default operator
+Objects
+	property
+	nested Objects
+	localStorage
+	autoBoxing
+	objectsAndReferences
+	destructuring
+	shortHandPropertry
+	shortHandMethod
+Document Object Model
