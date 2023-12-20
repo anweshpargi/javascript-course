@@ -17,5 +17,13 @@ css value
 html attribues, attibute name, attribute value, class attribute
 tool tip
 html structure
+three ways to create vairables
+	by using let
+	by using const
+	by using var
+
+
+Variables
+	
 indents
 line wrapping
