@@ -44,3 +44,13 @@ Objects
 	shortHandPropertry
 	shortHandMethod
 Document Object Model
+	document.body
+	document.body.innerHTML
+	document.querySelector()
+	blockElement
+	voidElement
+	events
+	eventListners
+	typeCoercion
+	windowObject
+	document.querySelector.classList
