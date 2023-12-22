@@ -3,6 +3,9 @@
   <head>
     <title>DOM Projects</title>
     <style>
+      body{
+        font-family: Arial;
+      }
       .subscribe-button{
         border: none;
         background-color: black;
@@ -10,6 +13,20 @@
         padding: 10px 15px 10px 15px;
         font-weight: bold;
         border-radius: 25px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+      .is-subscribed{
+        background-color: brown;
+      }
+      .cost-input{
+        font-size: 15px;
+        padding: 10px;
+      }
+      .calculate-button{
+        border: none;
+        background-color: rgb(140, 219, 21);
+        padding: 10px 10px 10px 10px;
       }
     </style>
   </head>
@@ -19,6 +36,14 @@
     subButton(document.querySelector('.js-subscribe-button').innerHTML)
     " class="js-subscribe-button subscribe-button">Subscribe</button>
 
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $50 = FREE shipping.</p>
+    <input placeholder="Cost of order" class="js-inputCost cost-input"
+    onkeydown="onKeyDown(event)">
+    <button onclick="calculateOrderCost()" class="calculate-button">Calculate</button>
+    <p class="js-amazonResult" ></p>
+
     <script>
       function subButton(htmlValue){
         let elementVar = document.querySelector('.js-subscribe-button');
@@ -27,7 +52,24 @@
           document.querySelector('.js-subscribe-button').innerHTML='Subscribed';
           document.querySelector('.js-subscribe-button').classList.add('is-subscribed');
         }
-        else{document.querySelector('.js-subscribe-button').innerHTML='Subscribe'}
+        else{
+          document.querySelector('.js-subscribe-button').innerHTML='Subscribe';
+          document.querySelector('.js-subscribe-button').classList.remove('is-subscribed');
+        }
+      }
+
+      function calculateOrderCost(){
+        console.log(typeof document.querySelector('.js-inputCost').value)
+        if(document.querySelector('.js-inputCost').value > 40){
+          document.querySelector('.js-amazonResult').innerHTML = `$${document.querySelector('.js-inputCost').value}`;
+        }
+        else{document.querySelector('.js-amazonResult').innerHTML = `$${Number(document.querySelector('.js-inputCost').value) + 10}`}
+      }
+      
+      function onKeyDown(event){
+        if(event.key==='Enter'){
+          calculateOrderCost();
+        }
       }
     </script>
   </body>
